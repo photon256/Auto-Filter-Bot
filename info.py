@@ -27,7 +27,7 @@ API_HASH = environ.get('API_HASH', '0480448e375c4d248fb32535e01f3438')
 if len(API_HASH) == 0:
     print('Error - API_HASH is missing, exiting now')
     exit()
-BOT_TOKEN = environ.get('BOT_TOKEN', '6523843192:AAG_UUlMtvZFRyMrCQUNyQWjeQGhEDC6xmI')
+BOT_TOKEN = environ.get('BOT_TOKEN', 'http://t.me/moviesdenewalabababot')
 if len(BOT_TOKEN) == 0:
     print('Error - BOT_TOKEN is missing, exiting now')
     exit()
