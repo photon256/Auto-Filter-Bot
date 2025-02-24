@@ -113,10 +113,10 @@ SHORTLINK = is_enabled('SHORTLINK', False)
 
 #premium info
 IS_PREMIUM = is_enabled('IS_PREMIUM', False)
-PAYMENT_QR = environ.get('PAYMENT_QR', '')
+PAYMENT_QR = environ.get('PAYMENT_QR', 'https://envs.sh/rf.jpg')
 if len(PAYMENT_QR) == 0:
     print('Info - PAYMENT_QR is empty')
-OWNER_UPI_ID = environ.get('OWNER_UPI_ID', '')  #if you not have UPI, then use another method
+OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'BOT IS FREE')  #if you not have UPI, then use another method
 if len(OWNER_UPI_ID) == 0:
     print('Info - OWNER_UPI_ID is empty')
 if len(PAYMENT_QR) == 0 or len(OWNER_UPI_ID) == 0:
