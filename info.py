@@ -19,13 +19,13 @@ def is_valid_ip(ip):
     return re.match(ip_pattern, ip) is not None
 
 # Bot information
-API_ID = environ.get('API_ID', '')
+API_ID = environ.get('API_ID', '16253557')
 if len(API_ID) == 0:
     print('Error - API_ID is missing, exiting now')
     exit()
 else:
     API_ID = int(API_ID)
-API_HASH = environ.get('API_HASH', '')
+API_HASH = environ.get('API_HASH', '81171c25e4cb9062cb10da8b7730432a')
 if len(API_HASH) == 0:
     print('Error - API_HASH is missing, exiting now')
     exit()
@@ -39,7 +39,7 @@ PORT = int(environ.get('PORT', '80'))
 PICS = [os.path.join('imgs', file) for file in os.listdir('imgs')]
 
 # Bot Admins
-ADMINS = environ.get('ADMINS', '')
+ADMINS = environ.get('ADMINS', '1996039956')
 if len(ADMINS) == 0:
     print('Error - ADMINS is missing, exiting now')
     exit()
@@ -47,21 +47,21 @@ else:
     ADMINS = [int(admins) for admins in ADMINS.split()]
 
 # Channels
-INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '').split()]
+INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '-1002131144121').split()]
 if len(INDEX_CHANNELS) == 0:
     print('Info - INDEX_CHANNELS is empty')
-LOG_CHANNEL = environ.get('LOG_CHANNEL', '')
+LOG_CHANNEL = environ.get('LOG_CHANNEL', '-1002205282436')
 if len(LOG_CHANNEL) == 0:
     print('Error - LOG_CHANNEL is missing, exiting now')
     exit()
 else:
     LOG_CHANNEL = int(LOG_CHANNEL)
-FORCE_SUB_CHANNELS = [int(fsub_channels) if fsub_channels.startswith("-") else fsub_channels for fsub_channels in environ.get('FORCE_SUB_CHANNELS', '').split()]
+FORCE_SUB_CHANNELS = [int(fsub_channels) if fsub_channels.startswith("-") else fsub_channels for fsub_channels in environ.get('FORCE_SUB_CHANNELS', '-1002303403489').split()]
 if len(FORCE_SUB_CHANNELS) == 0:
     print('Info - FORCE_SUB_CHANNELS is empty')
     
 # support group
-SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '')
+SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '-1002302335280')
 if len(SUPPORT_GROUP) == 0:
     print('Error - SUPPORT_GROUP is missing, exiting now')
     exit()
@@ -69,22 +69,22 @@ else:
     SUPPORT_GROUP = int(SUPPORT_GROUP)
 
 # MongoDB information
-DATABASE_URL = environ.get('DATABASE_URL', "")
+DATABASE_URL = environ.get('DATABASE_URL', "mongodb+srv://abcd:abcdeas@cluster0.a1k66.mongodb.net/?retryWrites=true&w=majority")
 if len(DATABASE_URL) == 0:
     print('Error - DATABASE_URL is missing, exiting now')
     exit()
-SECOND_DATABASE_URL = environ.get('SECOND_DATABASE_URL', "")
+SECOND_DATABASE_URL = environ.get('SECOND_DATABASE_URL', "mongodb+srv://abcd:abcdeas@cluster0.a1k66.mongodb.net/?retryWrites=true&w=majority")
 if len(SECOND_DATABASE_URL) == 0:
     print('Info - SECOND_DATABASE_URL is empty')
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Files')
 
 # Links
-SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/HA_Bots_Support')
-UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/HA_Bots')
-FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/HA_Films_World')
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/HA_Bots")
-VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/HA_Bots")
+SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/BEST_NEWW')
+UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/BEST_NEWW')
+FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/+klCxRlRbGBw0Yjgx')
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/LINKKHOLNE")
+VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/LINKKHOLNE")
 
 # Bot settings
 TIME_ZONE = pytz.timezone(environ.get("TIME_ZONE", 'Asia/Colombo'))
@@ -109,21 +109,21 @@ AUTO_DELETE = is_enabled('AUTO_DELETE', False)
 WELCOME = is_enabled('WELCOME', False)
 PROTECT_CONTENT = is_enabled('PROTECT_CONTENT', False)
 LONG_IMDB_DESCRIPTION = is_enabled("LONG_IMDB_DESCRIPTION", False)
-LINK_MODE = is_enabled("LINK_MODE", True)
+LINK_MODE = is_enabled("LINK_MODE", False)
 AUTO_FILTER = is_enabled('AUTO_FILTER', True)
 IMDB = is_enabled('IMDB', True)
 SPELL_CHECK = is_enabled("SPELL_CHECK", True)
 SHORTLINK = is_enabled('SHORTLINK', False)
 
 # for stream
-IS_STREAM = is_enabled('IS_STREAM', True)
-BIN_CHANNEL = environ.get("BIN_CHANNEL", "")
+IS_STREAM = is_enabled('IS_STREAM', False)
+BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1002205282436")
 if len(BIN_CHANNEL) == 0:
     print('Error - BIN_CHANNEL is missing, exiting now')
     exit()
 else:
     BIN_CHANNEL = int(BIN_CHANNEL)
-URL = environ.get("URL", "")
+URL = environ.get("URL", "https://t.me/+q8U0kv-yZ2YwM2M1")
 if len(URL) == 0:
     print('Error - URL is missing, exiting now')
     exit()
